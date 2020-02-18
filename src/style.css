@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+html, body, #root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Sriracha, sans-serif;
+}
+body {
+    background-color: black;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+    
+.btn-buscar {
+    height: 60px;
+    width: 200px;
+    border-radius: 0%;
+    font-size: 20px;
+    background: linear-gradient(to right, #673AB7 , #2196F3);
+    border: none;
+    color: white;
+    font-family: Sriracha, sans-serif;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 1px 0px 9px #ccc;
+}
+
+.conteudo {
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.render {
+    display: flex;
+    width: 100%;
+}
+
+.texto {
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+
