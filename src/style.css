@@ -33,8 +33,8 @@ body {
     color: white;
     font-family: Sriracha, sans-serif;
     cursor: pointer;
-    transition: all 0.5s ease;
     box-shadow: 1px 0px 9px #ccc;
+    border-radius: 30px;
 }
 
 .conteudo {
@@ -55,3 +55,6 @@ body {
     font-size: 20px;
 }
 
+.load-img {
+    width: 40px;
+}

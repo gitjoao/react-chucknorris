@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import api from "./service/api"
+import api from './service/api';
 import './style.css';
+
+import Loading from './component/Loading';
+import Content from './component/Content';
 
 function App() {
   const [frase, setFrase] = useState("Frase do chucknorris.");
-  const [img, setImg] = useState("https://assets.chucknorris.host/img/avatar/chuck-norris.png");
 
+  const [load, setLoad] = useState(false)
   async function handleClick () {
+    setLoad(true)
     const response = await api.get('/jokes/random')
     setFrase(response.data.value)
-    setImg(response.data.icon_url)
+    setLoad(false)
   }
 
   return (
@@ -17,10 +21,7 @@ function App() {
       <div className="conteudo">
         <button onClick={handleClick} className="btn-buscar"> Buscar </button>
       </div>
-      <div className="render">
-        <img src={img} alt="chucknorris"></img>
-        <span className="texto">{frase}</span>
-      </div>
+      {load ? <Loading /> : <Content frase={frase} /> }
     </div>
   );
 }
